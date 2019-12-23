@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_tree_form" model="ir.ui.view">
+        <field name="name">partner.area.tree</field>
+        <field name="model">partner.area</field>
+        <field name="arch" type="xml">
+            <tree string="Area">
+                <field name="name"/>
+                <field name="code"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_area_form" model="ir.ui.view">
+        <field name="name">partner.area.form</field>
+        <field name="model">partner.area</field>
+        <field name="arch" type="xml">
+            <form string="Area">
+                <sheet>
+                    <group>
+                        <field name="name" required="1"/>
+                        <field name="code"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_partner_area" model="ir.actions.act_window">
+        <field name="name">Area</field>
+        <field name="res_model">partner.area</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+    </record>
+
+    <menuitem
+        id="menu_partner_area_root"
+        parent="contacts.res_partner_menu_config"
+        action="action_partner_area"
+        sequence="3"
+    />
+</odoo>

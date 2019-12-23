@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+access_partner_area_generic,access_partner_area_generic,model_partner_area,,1,0,0,0
+access_partner_area_manager,access_partner_area_manager,model_partner_area,sales_team.group_sale_manager,1,1,1,1
